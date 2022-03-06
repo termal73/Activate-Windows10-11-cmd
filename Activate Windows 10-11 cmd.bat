@@ -2,17 +2,24 @@
 cls
 :start
 echo -----------------------------------------]
-echo A. Windows 10                            ]
-echo B. Windows 11                            ]
+echo 1. Windows 10                            ]
+echo 2. Windows 11                            ]
+echo 3. Exit.                                 ]
 echo -----------------------------------------]
 set /p windows=Select the letter of the version of Windows do you have: 
-if %windows%==A (
+if %windows%==1 (
     cls
     goto windows10
 )
-if %windows%==B (
+if %windows%==2 (
     cls
     goto windows11
+) 
+if %windows%==3 (
+    echo.
+    echo Thank you for use this program.
+    timeout /T 3 /NOBREAK>NUl
+    exit
 ) else (
     echo Your option isn't correctly, put it again with capital letters.
     timeout /T 3 /NOBREAK>NUl
@@ -27,7 +34,9 @@ echo 3. Activate Windows 10 Education.       ]
 echo 4. Activate Windows 10 Enterprise.      ]
 echo 5. Uninstall the license of Windows 10. ]
 echo 6. See my Windows 10 version.           ]
-echo 7. Go to the main menu.                 ]
+echo 7. See my license                       ]
+echo 8. Go to the main menu.                 ]
+echo 9. Exit.                                ]
 echo ----------------------------------------]
 set pro=VK7JG-NPHTM-C97JM-9MPGT-3V66T
 set home=TX9XD-98N7V-6WMQ6-BX7FG-H8Q99
@@ -55,15 +64,25 @@ if %option%==6 (
     goto again
 )
 if %option%==7 (
-    cls
-    goto start
+    slmgr /xpr
+    goto again
 )
-if %option% GEQ 8 (
+if %option%==8 (
+     cls
+      goto start
+)
+if %option%==9 (
+    echo.
+    echo Thank you for use this program.
+    timeout /T 3 /NOBREAK>NUl
+    exit
+) else (
     echo This option isn't correct, put a correct number.
-    timeout>nul /T 3 /NOBREAK
+    timeout /T 3 /NOBREAK>NUl
     cls
     goto windows10
 )
+
 slmgr /skms kms.digiboy.ir
 slmgr /ato
 goto again
@@ -93,7 +112,9 @@ echo 3. Activate Windows 11 Education.       ]
 echo 4. Activate Windows 11 Enterprise.      ]
 echo 5. Uninstall the license of Windows 10. ]
 echo 6. See my Windows 11 version.           ]
-echo 7. Go to the main menu.                 ]
+echo 7. See my license                       ]
+echo 8. Go to the main menu.                 ]
+echo 9. Exit.                                ]
 echo ----------------------------------------]
 set pro=W269N-WFGWX-YVC9B-4J6C9-T83GX
 set home=TX9XD-98N7V-6WMQ6-BX7FG-H8Q99
@@ -121,15 +142,25 @@ if %option%==6 (
     goto again
 )
 if %option%==7 (
+    slmgr /xpr
+    goto again
+)
+if %option%==8 (
     cls
     goto start
 )
-if %option% GEQ 8 (
+if %option%==9 (
+    echo.
+    echo Thank you for use this program.
+    timeout /T 3 /NOBREAK>NUl
+    exit
+) else (
     echo This option isn't correct, put a correct number.
-    timeout>nul /T 3 /NOBREAK
+    timeout /T 3 /NOBREAK>NUl
     cls
-    goto windows11
+    goto windows10
 )
+
 slmgr /skms kms.digiboy.ir
 slmgr /ato
 goto again
