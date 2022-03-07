@@ -21,7 +21,7 @@ if %windows%==3 (
     timeout /T 3 /NOBREAK>NUl
     exit
 ) else (
-    echo Your option isn't correctly, put it again with capital letters.
+    echo Your option isn't correctly, put a correct number.
     timeout /T 3 /NOBREAK>NUl
     cls
     goto start
